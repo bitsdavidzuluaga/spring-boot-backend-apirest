@@ -1,12 +1,15 @@
 server:
   port: 8081
 spring:
+  application:
+    name: spring-boot-backend-apirest
+    version: develop
   datasource:
-    url: jdbc:mysql://localhost/db_springboot_backend?allowPublicKeyRetrieval=true&useSSL=false
+    url: jdbc:mysql://localhost/db_springboot_backend?useSSL=false
     username: root
     password: sasa
-    driver-class-name: com.mysql.cj.jdbc.Drive
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: create-drop
-      dialect: org.hibernate.dialect.MySQL57Dialect
+      dialect: org.hibernate.dialect.MySQL57Dialect    show-sql: true

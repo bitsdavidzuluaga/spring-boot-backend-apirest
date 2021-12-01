@@ -2,44 +2,43 @@ package com.bolsadeideas.springboot.backend.apirest.models.services;
 
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.bolsadeideas.springboot.backend.apirest.models.entity.Cliente;
-import com.bolsadeideas.springboot.backend.apirest.models.repository.IClienteDao;
+import com.bolsadeideas.springboot.backend.apirest.models.entity.Teacher;
+import com.bolsadeideas.springboot.backend.apirest.models.repository.ITeacherDao;
 
 @Service
-public class ClienteServiceImpl implements IClienteService {
+public class TeacherServiceImpl implements ITeacherService {
+
 	@Autowired
-	private IClienteDao clienteDao;
+	private ITeacherDao teacherDao;
 	
 	@Override
 	@Transactional(readOnly = true)
-	public List<Cliente> findAll() {
-		return (List<Cliente>) clienteDao.findAll();
+	public List<Teacher> findAll() {
+		return (List<Teacher>) teacherDao.findAll();
 	}
 
 	@Override
 	@Transactional(readOnly = true)
-	public Cliente findById(Long id) {
+	public Teacher findById(Long id) {
 		// TODO Auto-generated method stub
-		return clienteDao.findById(id).orElse(null);
+		return teacherDao.findById(id).orElse(null);
 	}
 
 	@Override
 	@Transactional
-	public Cliente Save(Cliente cliente) {
+	public Teacher Save(Teacher teacher) {
 		// TODO Auto-generated method stub
-		return clienteDao.save(cliente);
+		return teacherDao.save(teacher);
 	}
 
 	@Override
 	@Transactional
 	public void delete(Long id) {
 		// TODO Auto-generated method stub
-		clienteDao.deleteById(id);
+		teacherDao.deleteById(id);
 	}
-	
 }

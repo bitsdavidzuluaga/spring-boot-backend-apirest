@@ -1,4 +1,4 @@
-package com.bolsadeideas.springboot.backend.apirest.models.dao;
+package com.bolsadeideas.springboot.backend.apirest.models.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
