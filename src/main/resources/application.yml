@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8080
 spring:
   application:
     name: spring-boot-backend-apirest
@@ -11,5 +11,5 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none
       dialect: org.hibernate.dialect.MySQL57Dialect    show-sql: true

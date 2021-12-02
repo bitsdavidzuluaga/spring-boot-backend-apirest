@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bolsadeideas.springboot.backend.apirest.models.entity.Teacher;
 import com.bolsadeideas.springboot.backend.apirest.models.services.ITeacherService;
 
-@CrossOrigin(origins = {"localhost:4200"})
+@CrossOrigin(origins = {"http://localhost:4200"})
 @RestController
 @RequestMapping("/api")
 public class TeacherRestController {

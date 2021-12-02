@@ -21,13 +21,14 @@ public class Teacher implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String nombre;
-	private String apellido;
+	private String name;
+	private String lastname;
 	private Integer identification;
 	private String email;
-	private Integer movil;
+	private Integer mobile;
 	private String user;
 	private String password;
+	private String rol;
 	
 	
 	@Column(name="create_at")
@@ -47,20 +48,20 @@ public class Teacher implements Serializable {
 		this.id = id;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getName() {
+		return name;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getApellido() {
-		return apellido;
+	public String getLastname() {
+		return lastname;
 	}
 
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 
 	public Integer getIdentification() {
@@ -79,12 +80,20 @@ public class Teacher implements Serializable {
 		this.email = email;
 	}
 
-	public Integer getMovil() {
-		return movil;
+	public String getRol() {
+		return rol;
 	}
 
-	public void setMovil(Integer movil) {
-		this.movil = movil;
+	public void setRol(String rol) {
+		this.rol = rol;
+	}
+
+	public Integer getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(Integer mobile) {
+		this.mobile = mobile;
 	}
 
 	public String getUser() {
@@ -103,14 +112,7 @@ public class Teacher implements Serializable {
 		this.password = password;
 	}
 
-	public Date getCreateAt() {
-		return createAt;
-	}
 
-	public void setCreateAt(Date createAt) {
-		this.createAt = createAt;
-	}
-	
 
 	/**
 	 * 
